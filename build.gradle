@@ -4,6 +4,8 @@
  */
 
 buildscript {
+    ext.basePackageName = "com.mgoogle"
+
     ext.cronetVersion = '102.5005.125'
     ext.nlpVersion = '2.0-alpha10'
     ext.safeParcelVersion = '1.7.0'

@@ -23,6 +23,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.util.Log;
 
+import org.microg.gms.basement.BuildConfig;
 import org.microg.gms.common.PackageUtils;
 import org.microg.gms.settings.SettingsContract;
 
@@ -35,7 +36,7 @@ import static org.microg.gms.auth.AuthPrefs.isTrustGooglePermitted;
 public class AuthManager {
 
     private static final String TAG = "GmsAuthManager";
-    public static final String PERMISSION_TREE_BASE = "com.google.android.googleapps.permission.GOOGLE_AUTH.";
+    public static final String PERMISSION_TREE_BASE = BuildConfig.BASE_PACKAGE_NAME + ".android.googleapps.permission.GOOGLE_AUTH.";
     public static final String PREF_AUTH_VISIBLE = SettingsContract.Auth.VISIBLE;
     public static final int ONE_HOUR_IN_SECONDS = 60 * 60;
 

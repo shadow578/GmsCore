@@ -41,6 +41,8 @@ android {
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
         buildConfigField "int", "VERSION_CODE", "$appVersionCode"
+
+        buildConfigField "String", "BASE_PACKAGE_NAME", "\"$basePackageName\""
     }
 
     compileOptions {
