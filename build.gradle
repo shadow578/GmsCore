@@ -32,7 +32,8 @@ buildscript {
 
     ext.androidBuildGradleVersion = '7.2.1'
 
-    ext.androidBuildVersionTools = '33.0.0'
+    //FIXME build fails with 33.0.0 (on windows), but downgrading fixes the issue
+    ext.androidBuildVersionTools = '30.0.3'
 
     ext.androidMinSdk = 14
     ext.androidTargetSdk = 29
