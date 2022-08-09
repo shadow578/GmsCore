@@ -15,11 +15,8 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_app_name">Језгро микроГ услуга</string>
-    <string name="gms_settings_name">Поставке микроГ</string>
 
     <string name="just_a_sec">Само тренутак…</string>
-    <string name="google_account_label">Гугл</string>
     <string name="ask_permission_tos">Ако наставите дозволићете овој апликацији и Гуглу да користе ваше податке у складу са њиховим условима коришћења и политикама приватности.</string>
     <string name="ask_scope_permission_title">%s жели да:</string>
     <string name="ask_service_permission_title">%s жели да користи:</string>

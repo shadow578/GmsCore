@@ -15,12 +15,9 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_app_name">microG Services Core</string>
-    <string name="gms_settings_name">microG設定</string>
     <string name="gms_settings_summary">microG services Coreの設定</string>
 
     <string name="just_a_sec">しばらくお待ちください...</string>
-    <string name="google_account_label">Google</string>
     <string name="ask_permission_tos">続行すると、このアプリとGoogleがそれぞれ利用規約とプライバシーポリシーに従ってお客様の情報を使用することを許可したことになります。</string>
     <string name="account_manager_title">Googleアカウントの管理</string>
     <string name="sorry">申し訳ありません...</string>

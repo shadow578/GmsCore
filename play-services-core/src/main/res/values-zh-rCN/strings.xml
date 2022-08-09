@@ -59,7 +59,6 @@
     <string name="checkin_not_registered">未注册</string>
     <string name="checkin_last_registration">上次注册：<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
 
-    <string name="gms_settings_name">microG 设置</string>
     <string name="gms_settings_summary">设置 microG 服务核心</string>
     <string name="just_a_sec">请稍等…</string>
     <string name="ask_permission_tos">继续则代表您同意此应用和 Google 遵循各自的服务条款和隐私政策使用您的个人信息。</string>
@@ -150,11 +149,9 @@ microG GmsCore 内置一套自由的 SafetyNet 实现，但是官方服务器要
     <string name="perm_extended_access_label">额外使用 Google 服务</string>
 
 
-    <string name="google_account_label">Google</string>
     <string name="network_type_wifi">Wi-Fi</string>
     <string name="place_picker_location_lat_lng">(%1$.7f, %2$.7f)</string>
     <string name="perm_provision_label">预配置 microG 服务</string>
-    <string name="gms_app_name">microG 服务核心</string>
     <string name="pref_auth_trust_google_title">允许 Google 向应用提供验证</string>
     <string name="pref_device_registration_import_custom_profile_title">导入自定义配置信息</string>
     <string name="pref_device_registration_serial_title">序列号</string>
