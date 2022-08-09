@@ -4,6 +4,7 @@
  */
 
 buildscript {
+    ext.applicationNamespace = "com.google.android.gms"
     ext.basePackageName = "com.mgoogle"
 
     ext.cronetVersion = '102.5005.125'
