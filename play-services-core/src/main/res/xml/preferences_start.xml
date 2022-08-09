@@ -25,6 +25,11 @@
                 android:targetClass="org.microg.gms.ui.SelfCheckFragment$AsActivity"
                 android:targetPackage="@string/var_pref_start_gms_package" />
         </Preference>
+
+        <org.microg.gms.ui.TextPreference
+            android:icon="@drawable/ic_info_outline"
+            android:selectable="false"
+            android:summary="@string/pref_start_revanced_notice" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/prefcat_google_services">
         <Preference

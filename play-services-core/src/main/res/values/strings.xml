@@ -8,6 +8,10 @@
     <string name="gms_settings_name" translatable="false">ReVanced microG Settings</string>
     <string name="gms_settings_summary">Setup microG services Core.</string>
 
+    <string name="pref_start_revanced_notice">This is a microG build for use with ReVanced.
+<br/>
+Some features may be unavailable</string>
+
     <string name="just_a_sec">Just a sec…</string>
     <string name="google_account_label" translatable="false">ReVanced</string>
     <string name="ask_permission_tos">By continuing, you allow this app and Google to use your information in accordance with their respective terms of service and privacy policies.</string>
