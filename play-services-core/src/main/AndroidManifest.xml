@@ -144,7 +144,7 @@
             android:process=":ui"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
-                <action android:name="com.google.android.gms.location.places.ui.PICK_PLACE" />
+                <action android:name="${basePackageName}.android.gms.location.places.ui.PICK_PLACE" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -152,21 +152,21 @@
 
         <service android:name="org.microg.gms.places.GeoDataService">
             <intent-filter>
-                <action android:name="com.google.android.gms.location.places.GeoDataApi" />
-                <action android:name="com.google.android.gms.location.places.PlacesApi" />
+                <action android:name="${basePackageName}.android.gms.location.places.GeoDataApi" />
+                <action android:name="${basePackageName}.android.gms.location.places.PlacesApi" />
             </intent-filter>
         </service>
 
         <service android:name="org.microg.gms.places.PlaceDetectionService">
             <intent-filter>
-                <action android:name="com.google.android.gms.location.places.PlaceDetectionApi" />
+                <action android:name="${basePackageName}.android.gms.location.places.PlaceDetectionApi" />
             </intent-filter>
         </service>
 
         <service
             android:name="org.microg.gms.wearable.location.WearableLocationService">
             <intent-filter>
-                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <action android:name="${basePackageName}.android.gms.wearable.MESSAGE_RECEIVED" />
                 <data
                     android:host="*"
                     android:pathPrefix="/com/google/android/location/fused/wearable"
@@ -253,7 +253,7 @@
             android:name="org.microg.gms.gcm.SendReceiver"
             android:process=":persistent">
             <intent-filter>
-                <action android:name="com.google.android.gcm.intent.SEND" />
+                <action android:name="${basePackageName}.android.gcm.intent.SEND" />
             </intent-filter>
         </receiver>
 
@@ -300,7 +300,7 @@
 
         <service android:name="org.microg.gms.car.CarService">
             <intent-filter>
-                <action android:name="com.google.android.gms.car.service.START" />
+                <action android:name="${basePackageName}.android.gms.car.service.START" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -310,7 +310,7 @@
 
         <service android:name="org.microg.gms.people.PeopleService">
             <intent-filter>
-                <action android:name="com.google.android.gms.people.service.START" />
+                <action android:name="${basePackageName}.android.gms.people.service.START" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -331,7 +331,7 @@
 
         <service android:name="org.microg.gms.wearable.WearableService">
             <intent-filter>
-                <action android:name="com.google.android.gms.wearable.BIND" />
+                <action android:name="${basePackageName}.android.gms.wearable.BIND" />
             </intent-filter>
         </service>
 
@@ -359,7 +359,7 @@
             android:exported="true"
             android:process=":ui">
             <intent-filter>
-                <action android:name="com.google.android.gms.common.account.CHOOSE_ACCOUNT" />
+                <action android:name="${basePackageName}.android.gms.common.account.CHOOSE_ACCOUNT" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -372,7 +372,7 @@
             android:process=":ui"
             android:theme="@style/Theme.LoginBlue">
             <intent-filter>
-                <action android:name="com.google.android.gms.auth.login.LOGIN" />
+                <action android:name="${basePackageName}.android.gms.auth.login.LOGIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -403,26 +403,26 @@
             android:name="org.microg.gms.auth.credentials.CredentialPickerActivity"
             android:process=":ui">
             <intent-filter>
-                <action android:name="com.google.android.gms.auth.api.credentials.PICKER" />
+                <action android:name="${basePackageName}.android.gms.auth.api.credentials.PICKER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
         <service android:name="org.microg.gms.auth.credentials.CredentialsService">
             <intent-filter>
-                <action android:name="com.google.android.gms.auth.api.credentials.service.START" />
+                <action android:name="${basePackageName}.android.gms.auth.api.credentials.service.START" />
             </intent-filter>
         </service>
 
         <service android:name="org.microg.gms.auth.proxy.AuthProxyService">
             <intent-filter>
-                <action android:name="com.google.android.gms.auth.service.START" />
+                <action android:name="${basePackageName}.android.gms.auth.service.START" />
             </intent-filter>
         </service>
 
         <service android:name="org.microg.gms.auth.appcert.AppCertService">
             <intent-filter>
-                <action android:name="com.google.android.gms.auth.be.appcert.AppCertService" />
+                <action android:name="${basePackageName}.android.gms.auth.be.appcert.AppCertService" />
             </intent-filter>
         </service>
 
@@ -430,7 +430,7 @@
 
         <service android:name="org.microg.gms.games.GamesStubService">
             <intent-filter>
-                <action android:name="com.google.android.gms.games.service.START" />
+                <action android:name="${basePackageName}.android.gms.games.service.START" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
@@ -440,7 +440,7 @@
             android:process=":ui"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog">
             <intent-filter>
-                <action android:name="com.google.android.gms.games.PLAY_GAMES_UPGRADE" />
+                <action android:name="${basePackageName}.android.gms.games.PLAY_GAMES_UPGRADE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -587,7 +587,7 @@
             android:name="org.microg.gms.measurement.MeasurementService"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.google.android.gms.measurement.START" />
+                <action android:name="${basePackageName}.android.gms.measurement.START" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

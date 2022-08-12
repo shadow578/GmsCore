@@ -30,6 +30,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.google.android.gms.BuildConfig;
 import com.google.android.gms.common.data.DataHolder;
 import com.google.android.gms.wearable.Asset;
 import com.google.android.gms.wearable.ConnectionConfiguration;
@@ -420,7 +421,7 @@ public class WearableImpl {
         }
         if (intent != null) {
             try {
-                invoker.invoke(RemoteListenerProxy.get(context, intent, IWearableListener.class, "com.google.android.gms.wearable.BIND_LISTENER"));
+                invoker.invoke(RemoteListenerProxy.get(context, intent, IWearableListener.class, BuildConfig.BASE_PACKAGE_NAME + ".android.gms.wearable.BIND_LISTENER"));
             } catch (RemoteException e) {
                 Log.w(TAG, "Failed to deliver message received to " + intent, e);
             }
@@ -544,7 +545,7 @@ public class WearableImpl {
 
     public void sendMessageReceived(String packageName, MessageEventParcelable messageEvent) {
         Log.d(TAG, "onMessageReceived: " + messageEvent);
-        Intent intent = new Intent("com.google.android.gms.wearable.MESSAGE_RECEIVED");
+        Intent intent = new Intent(BuildConfig.BASE_PACKAGE_NAME + ".android.gms.wearable.MESSAGE_RECEIVED");
         intent.setPackage(packageName);
         intent.setData(Uri.parse("wear://" + getLocalNodeId() + "/" + messageEvent.getPath()));
         invokeListeners(intent, listener -> listener.onMessageReceived(messageEvent));
@@ -568,7 +569,7 @@ public class WearableImpl {
         intent.setPackage(packageName);
         intent.setData(uri);
 
-        return RemoteListenerProxy.get(context, intent, IWearableListener.class, "com.google.android.gms.wearable.BIND_LISTENER");
+        return RemoteListenerProxy.get(context, intent, IWearableListener.class, BuildConfig.BASE_PACKAGE_NAME + ".android.gms.wearable.BIND_LISTENER");
     }
 
     private void closeConnection(String nodeId) {
