@@ -218,8 +218,9 @@
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
 
+                <!-- *#*#MGCHECKIN#*#* -->
                 <data
-                    android:host="2432546"
+                    android:host="642432546"
                     android:scheme="android_secret_code" />
             </intent-filter>
         </receiver>

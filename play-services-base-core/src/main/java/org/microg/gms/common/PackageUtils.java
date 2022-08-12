@@ -16,6 +16,10 @@
 
 package org.microg.gms.common;
 
+import static android.os.Build.VERSION.SDK_INT;
+import static org.microg.gms.common.Constants.GMS_PACKAGE_NAME;
+import static org.microg.gms.common.Constants.GMS_PACKAGE_SIGNATURE_SHA1;
+
 import android.app.ActivityManager;
 import android.app.Application;
 import android.app.PendingIntent;
@@ -28,6 +32,8 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import org.microg.gms.base.core.BuildConfig;
+
 import java.lang.reflect.Method;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -35,10 +41,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static android.os.Build.VERSION.SDK_INT;
-import static org.microg.gms.common.Constants.GMS_PACKAGE_NAME;
-import static org.microg.gms.common.Constants.GMS_PACKAGE_SIGNATURE_SHA1;
 
 public class PackageUtils {
 
@@ -106,7 +108,7 @@ public class PackageUtils {
                     return true;
             }
         }
-        return context.checkCallingPermission("org.microg.gms.EXTENDED_ACCESS") == PackageManager.PERMISSION_GRANTED;
+        return context.checkCallingPermission(BuildConfig.BASE_PACKAGE_NAME + ".gms.EXTENDED_ACCESS") == PackageManager.PERMISSION_GRANTED;
     }
 
     public static void checkPackageUid(Context context, String packageName, int callingUid) {

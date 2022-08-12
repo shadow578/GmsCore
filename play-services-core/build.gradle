@@ -107,6 +107,7 @@ android {
 
         // provide package name to xml resources
         resValue "string", "var_authenticator_account_type", "$basePackageName"
+        resValue "string", "var_contact_syncadapter_account_type", "$basePackageName"
         resValue "string", "var_pref_auth_action_security_settings", "${basePackageName}.android.gms.accountsettings.SECURITY_SETTINGS"
         resValue "string", "var_pref_auth_action_privacy_settings", "${basePackageName}.android.gms.accountsettings.PRIVACY_SETTINGS"
         resValue "string", "var_pref_auth_action_preferences_settings", "${basePackageName}.android.gms.accountsettings.ACCOUNT_PREFERENCES_SETTINGS"
