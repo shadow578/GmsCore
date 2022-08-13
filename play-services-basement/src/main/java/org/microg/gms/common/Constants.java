@@ -20,6 +20,7 @@ import org.microg.gms.basement.BuildConfig;
 
 public class Constants {
     public static final int GMS_VERSION_CODE = (BuildConfig.VERSION_CODE / 1000) * 1000;
+    public static final String GOOGLE_GMS_PACKAGE_NAME = "com.google.android.gms";
     public static final String GMS_PACKAGE_NAME = BuildConfig.BASE_PACKAGE_NAME + ".android.gms";
     public static final String GSF_PACKAGE_NAME = BuildConfig.BASE_PACKAGE_NAME + ".android.gsf";
     public static final String GMS_PACKAGE_SIGNATURE_SHA1 = "38918a453d07199354f8b19af05ec6562ced5788";
