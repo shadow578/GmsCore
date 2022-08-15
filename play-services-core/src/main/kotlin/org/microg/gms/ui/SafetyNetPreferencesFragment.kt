@@ -21,6 +21,7 @@ import com.google.android.gms.safetynet.RecaptchaResultData
 import com.google.android.gms.safetynet.internal.ISafetyNetCallbacks
 import org.json.JSONException
 import org.json.JSONObject
+import org.microg.gms.common.Constants
 import org.microg.gms.safetynet.SafetyNetClientService
 import org.microg.gms.safetynet.SafetyNetClientServiceImpl
 import kotlin.random.Random
@@ -44,7 +45,7 @@ class SafetyNetPreferencesFragment : PreferenceFragmentCompat() {
             runAttest.setIcon(R.drawable.ic_circle_pending)
             runAttest.setSummary(R.string.pref_test_summary_running)
             val handler = Handler(Looper.myLooper()!!)
-            SafetyNetClientServiceImpl(context, context.packageName, lifecycle).attestWithApiKey(object : ISafetyNetCallbacks.Default() {
+            SafetyNetClientServiceImpl(context, Constants.GOOGLE_GMS_PACKAGE_NAME, lifecycle).attestWithApiKey(object : ISafetyNetCallbacks.Default() {
                 override fun onAttestationData(status: Status?, attestationData: AttestationData?) {
                     handler.post {
                         if (status?.isSuccess == true) {
@@ -105,7 +106,7 @@ class SafetyNetPreferencesFragment : PreferenceFragmentCompat() {
             runReCaptcha.setIcon(R.drawable.ic_circle_pending)
             runReCaptcha.setSummary(R.string.pref_test_summary_running)
             val handler = Handler(Looper.myLooper()!!)
-            SafetyNetClientServiceImpl(context, context.packageName, lifecycle).verifyWithRecaptcha(object : ISafetyNetCallbacks.Default() {
+            SafetyNetClientServiceImpl(context, Constants.GOOGLE_GMS_PACKAGE_NAME, lifecycle).verifyWithRecaptcha(object : ISafetyNetCallbacks.Default() {
                 override fun onRecaptchaResult(status: Status?, recaptchaResultData: RecaptchaResultData?) {
                     handler.post {
                         if (status?.isSuccess == true) {
