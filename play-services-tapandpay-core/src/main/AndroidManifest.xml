@@ -9,7 +9,7 @@
     <application>
         <service android:name="org.microg.gms.tapandpay.TapAndPayService">
             <intent-filter>
-                <action android:name="com.google.android.gms.tapandpay.service.BIND" />
+                <action android:name="${basePackageName}.android.gms.tapandpay.service.BIND" />
             </intent-filter>
         </service>
     </application>
